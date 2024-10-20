@@ -1,0 +1,59 @@
+        Big Data Analytics
+
+The process of examining large, complex datasets (Big Data) to uncover useful information such as trends, patterns, customer preferences, and hidden insights.
+
+
+        Hadoop
+
+ Hadoop is an open-source framework used to store and process Big Data in a distributed environment across many computers.
+ Hadoop Distributed File System (HDFS) allows data to be stored across multiple machines, which enables handling very large datasets.
+
+
+        Hadoop Ecosystem
+
+The Hadoop Ecosystem refers to the collection of tools and technologies built around Hadoop to make it more powerful and flexible for handling Big Data.
+Components:
+    HDFS: The file storage system of Hadoop.
+    MapReduce: The computation engine that processes large datasets.
+    Hive: A data warehouse built on top of Hadoop that provides SQL-like querying.
+    Pig: A high-level scripting language for data processing.
+    HBase: A NoSQL database that provides real-time read/write access to Big Data.
+    YARN: A resource manager for handling job scheduling and cluster resource management.
+
+
+        MapReduce
+
+MapReduce is the programming model used by Hadoop to process large datasets in a distributed manner.
+    Map: Breaks down the big dataset into smaller chunks and processes them in parallel across multiple machines.
+    Reduce: Combines the output from the "Map" phase to produce a final result.
+
+Example: If you're counting the number of times a word appears in a large text file, MapReduce splits the file, processes the word count in parallel, and then combines the results.
+
+
+        Apache Spark
+
+Apache Spark is an open-source Big Data processing engine that is much faster than Hadoop's MapReduce because it processes data in-memory (rather than writing to disk like Hadoop).
+It’s faster and more efficient for complex data analytics tasks, such as machine learning and real-time processing, compared to Hadoop's MapReduce.
+
+
+        PySpark
+
+PySpark is the Python API for Apache Spark, allowing developers to use Python to interact with Spark's engine for Big Data processing.
+It combines the power of Python's ease of use with the scalability and speed of Spark, making it easier for data scientists and developers to work with Big Data.
+
+
+        RDD(Resilient Distributed Dataset)
+
+RDDs Like a special list or collection of data that is divided and stored across multiple computers (or machines). It allows Spark to process Big Data by splitting the data into smaller parts and working on those parts simultaneously on different machines.
+
+RDDs in Spark are more flexible, faster (in-memory processing), and easier to use compared to MapReduce in Hadoop.
+MapReduce focuses on disk-based processing, which makes it slower and less efficient for complex workflows.
+
+Two things you can do with RDDs:
+    1. Transformations: These are operations that change the data. For example:
+                        map(): To change each number.
+                        filter(): To keep only the numbers you want.
+    
+    2. Actions: These are operations that give you a result. For example:
+                        collect(): To gather the results from all machines.
+                        count(): To count how many items are in the RDD.
